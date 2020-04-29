@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+   double x=0;
+   double y;
+   while(x<1)
+   {
+       y=log10(x+3)/exp(x)+ sin(x/2);       
+       printf("resultat %f \n", y);
+       x+=0.1;
+   }
+    return 0;
+}
+---------------------------------------------------------------------------------------------------------------------------------------
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+   double x=0;
+   double y;
+   do
+   {
+       y=log10(x+3)/exp(x)+ sin(x/2);
+       printf("resultat %f \n", y);
+       x+=0.1;
+   }
+while(x<1);
+    return 0;
+}

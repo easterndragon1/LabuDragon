@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <math.h>
+int main() {
+    char c;
+    int N;
+  printf("Введіть число:");
+  scanf("%i", &N);
+  if(N<11){
+      c='a';
+  }
+  else if(10<N && N<21){
+      c='b';
+  }
+  else if(20<N && N<31){
+      c='c';
+  }
+  else if(30<N && N<41){
+      c='d';
+  }
+  else{
+      printf("Не входить ні в один інтервал");
+  }
+  switch (c)
+  {
+      case 'a':
+      {
+          printf("Діапазон 1-10 : Інтервал А");
+          break;
+      }
+      case 'b':
+      {
+          printf("Діапазон 11-20 : Інтервал B");
+          break;
+      }
+      case 'c':
+      {
+          printf("Діапазон 21-30 : Інтервал C");
+          break;
+      }
+      case 'd':
+      {
+             printf("Діапазон 31-40 : Інтервал D");
+                break;
+      }
+    }
+    return 0;
+}

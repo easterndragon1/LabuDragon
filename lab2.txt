@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<math.h>
+int main() { 
+double c=1.231; 
+double d=1.152; 
+double x=3.984; 
+double y=2.564; 
+double a; 
+if(x>=y) { 
+a=c*fabsl(x*y)+log(x); 
+printf("x>=y \n"); } 
+else { 
+a = d*exp(sqrt(x))+cbrt(y); 
+printf("x<y \n"); } 
+printf("a=%f",a); 
+return 0; 
+}}

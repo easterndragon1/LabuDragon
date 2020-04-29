@@ -1,0 +1,65 @@
+import random
+class karta():
+    def __init__(self,coloda=["6-черва","7-черва","8-черва","9-черва","10-черва","Валєт-черва","Дама-черва","Король-черва","Туз-черва","6-хреста","7-хреста","8-хреста","9-хреста","10-хреста","Валєт-хреста","Дама-хреста","Король-хреста","Туз-хреста"]):
+        self.coloda=coloda
+class coloda_kart(karta):
+    def __init__(self):
+        super().__init__()
+        random.shuffle(self.coloda)
+    def nom(self):
+        """Виведення карти за номером розташування у колоді"""
+        while True:
+            self.a=int(input("Введіть число:"))
+            if self.a<len(self.coloda):
+                print("Під номером",self.a,"карта",self.coloda[self.a])
+                break
+            else:
+                print("Потрібно ввести число менше", len(self.coloda))
+                continue
+    def vsi(self):
+        """Виведення всіх карт"""
+        print(*self.coloda,sep="\n")
+    def peremish(self):
+        """Перемішування колоди"""
+        random.shuffle(self.coloda)
+        print(*self.coloda,sep="\n")
+    def vud(self):
+        """Вибрати одну карту з колоди"""
+        while True:
+            self.b = input("Введіть карту яку ви хочете щоб вам видали:")
+            if self.b in self.coloda:
+                self.coloda.remove(self.b)
+                print("Вам видали карту",self.b)
+                print("Даної карти більше немає у колоді")
+                break
+            else:
+                print("Даної карти немає в колоді")
+                continue
+    def vid(self):
+        self.w = []
+        self.q=random.choice(self.coloda)
+        self.w.append(self.q)
+        self.coloda.remove(self.q)
+        self.q = random.choice(self.coloda)
+        self.w.append(self.q)
+        self.coloda.remove(self.q)
+        self.q = random.choice(self.coloda)
+        self.w.append(self.q)
+        self.coloda.remove(self.q)
+        self.q = random.choice(self.coloda)
+        self.w.append(self.q)
+        self.coloda.remove(self.q)
+        self.q = random.choice(self.coloda)
+        self.w.append(self.q)
+        self.coloda.remove(self.q)
+        self.q = random.choice(self.coloda)
+        self.w.append(self.q)
+        self.coloda.remove(self.q)
+        print("Ваші карти:\n",*self.w)
+k=coloda_kart()
+k.nom()
+k.vsi()
+k.peremish()
+k.vud()
+k.vid()
+

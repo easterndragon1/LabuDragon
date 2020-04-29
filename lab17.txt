@@ -1,0 +1,14 @@
+Файл lab17.py
+import mod
+mod.ob()
+
+Файл mod.py
+def ob(): 
+	print('Введіть значення елементів списку:') 
+	a=[int(i) for i in input().split()] 
+	sum=0 
+	for k in a: 
+		sum+=k 
+		ser=sum/len(a) 
+	print('Середнє арифметичне =',ser)
+

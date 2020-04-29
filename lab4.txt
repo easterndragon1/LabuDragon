@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    double a=2.1;
+    double s;
+    int i;
+   double r=0;
+    for(i=1;i<=6; i++)
+    {
+        s=9+4*a-i;
+        r+=s;
+    }
+    printf("Suma %f \n", r);
+    return 0;
+}
+--------------------------------------------------------------------------------------------------------------------
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    double a=2.1;
+    double s;
+    int i;
+   double r=1;
+    for(i=1;i<=5; i++)
+    {
+        s=pow(i,2)+a;
+        r*=s;
+    }
+    printf("Suma %f \n", r);
+    return 0;
+}
