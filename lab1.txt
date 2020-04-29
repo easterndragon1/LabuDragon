@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    double k=2.84;
+    double s=3.26;
+    double u,w;
+    u=(pow(sin((k+4*s)-2),2))/k*sqrt(s)-1;
+    printf("u=%f\n",u);
+    w=2*k+fabsl(3-s)*cos(k+1);
+    printf("w=%f",w);
+    return 0;
+}
+-------------------------------------------------------------------------------------------------------------------
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    double a=0.37;
+    double b=0.46;
+    double x=1.09;
+    double y;
+    y=(exp(9.2)*asin(b))/(tan(a*x)+sqrt(x+a))+log10(2*pow(x,2));
+    printf("y=%f\n",y);
+    return 0;
+}
